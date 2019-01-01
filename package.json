@@ -1,7 +1,7 @@
 {
   "name": "fastify-ws",
   "version": "1.0.0",
-  "description": "Basic WebSocket support for Fastify built on the blazing fast ws and uws libraries.",
+  "description": "Basic WebSocket support for Fastify built on the blazing fast ws and @clusterws/cws libraries.",
   "main": "index.js",
   "scripts": {
     "test": "standard | snazzy && tap test.js"
@@ -37,7 +37,7 @@
     "bufferutil": "^3.0.5",
     "fastify-plugin": "^1.2.0",
     "utf-8-validate": "^4.0.2",
-    "uws": "10.148.0",
+    "@clusterws/cws": "^0.10.0",
     "ws": "^5.2.1"
   }
 }
