@@ -5,15 +5,22 @@ const fp = require('fastify-plugin')
 module.exports = fp((fastify, opts, next) => {
   const lib = opts.library || 'ws'
 
-  if (lib !== 'ws' && lib !== '@clusterws/cws') return next(new Error('Invalid "library" option'))
-
-  let WebSocketServer = require(lib)
+  let WebSocketServer = null
   if (lib === 'ws') {
-    WebSocketServer = WebSocketServer.Server
+    WebSocketServer = require(lib).Server
+  } else if (lib === '@clusterws/cws') {
+    WebSocketServer = require(lib).WebSocketServer
+  } else {
+    return next(new Error('Invalid "library" option'))
   }
-  const wss = new WebSocketServer({
+
+  const wsOpts = {
     server: fastify.server
-  })
+  }
+  if (opts.path !== undefined) {
+    wsOpts.path = opts.path
+  }
+  const wss = new WebSocketServer(wsOpts)
 
   fastify.decorate('ws', wss)
 
