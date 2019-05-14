@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "es2018"
+    ],
+    "allowJs": false,
+    "strict": true,
+    "downlevelIteration": true
+  }
+}

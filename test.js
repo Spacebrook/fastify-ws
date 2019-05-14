@@ -47,7 +47,7 @@ test('Error | invalid library option', t => {
   const fastify = require('fastify')()
   const fastifyWS = require('.')
 
-  fastify.register(fastifyWS, { library: 'invalid' })
+  fastify.register(fastifyWS, {library: 'invalid'})
 
   fastify.listen(0, err => {
     fastify.close()
