@@ -39,7 +39,7 @@
     "@types/node": "^12.0.1",
     "bufferutil": "^4.0.1",
     "fastify-plugin": "^1.2.0",
-    "utf-8-validate": "^4.0.2",
+    "utf-8-validate": "^5.0.2",
     "ws": "^5.2.1"
   }
 }
