@@ -1,24 +1,24 @@
-'use strict'
+"use strict";
 
-const fastify = require('fastify')()
+const fastify = require("fastify")();
 
-fastify.register(require('../.'), {
-  library: 'uws' // Use the uws library instead of the default ws library
-})
+fastify.register(require("../."), {
+    library: "uws" // Use the uws library instead of the default ws library
+});
 
 fastify.ready(err => {
-  if (err) throw err
+    if (err) throw err;
 
-  console.log('Server started.')
+    console.log("Server started.");
 
-  fastify.ws
-    .on('connection', socket => {
-      console.log('Client connected.')
+    fastify.ws
+        .on("connection", socket => {
+            console.log("Client connected.");
 
-      socket.on('message', msg => socket.send(msg)) // Creates an echo server
+            socket.on("message", msg => socket.send(msg)); // Creates an echo server
 
-      socket.on('close', () => console.log('Client disconnected.'))
-    })
-})
+            socket.on("close", () => console.log("Client disconnected."));
+        });
+});
 
-fastify.listen(34567)
+fastify.listen(34567);
