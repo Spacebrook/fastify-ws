@@ -8,7 +8,7 @@ module.exports = fp((fastify, opts, next) => {
     let WebSocketServer = null;
     if (lib === "ws") {
         WebSocketServer = require(lib).Server;
-    } else if (lib === "@clusterws/cws") {
+    } else if (lib === "clusterws") {
         WebSocketServer = require(lib).WebSocketServer;
     } else {
         return next(new Error("Invalid \"library\" option"));

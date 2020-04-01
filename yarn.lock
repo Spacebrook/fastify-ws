@@ -97,11 +97,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@clusterws/cws@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@clusterws/cws/-/cws-0.15.0.tgz#1d585927252d1cd92e676c952fa6d69df14a0d07"
-  integrity sha512-41QpCngw86n41hIdU5Nx2QJmmxZuA9FPtDkjONrYpk27L7HjL1kj6J5oWEjbr14yXLfigZit3VY+oACDCGbiHw==
-
 "@types/node@^12.0.1":
   version "12.7.1"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.7.1.tgz#3b5c3a26393c19b400844ac422bd0f631a94d69d"
@@ -640,6 +635,13 @@ cliui@^5.0.0:
     string-width "^3.1.0"
     strip-ansi "^5.2.0"
     wrap-ansi "^5.1.0"
+
+clusterws@^3.3.0:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/clusterws/-/clusterws-3.3.1.tgz#f168996d14ee10e92dd1f9952b0ab863e6911952"
+  integrity sha512-WEh56mkDUVP/+FcnYy5XdkfcKnV3V8IhEZvBgC/RS52RW/d2ix5qg2I3XqvVuWQO6u1Jka1gGg81W6OUYQDIgw==
+  dependencies:
+    uws "10.148.1"
 
 code-point-at@^1.0.0:
   version "1.1.0"
@@ -2994,6 +2996,11 @@ uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
   integrity sha512-yXJmeNaw3DnnKAOKJE51sL/ZaYfWJRl1pK9dr19YFCu0ObS231AB1/LbqTKRAQ5kw8A90rA6fr4riOUpTZvQZA==
+
+uws@10.148.1:
+  version "10.148.1"
+  resolved "https://registry.yarnpkg.com/uws/-/uws-10.148.1.tgz#fd1a79cf6118a388e0a1bed8a1397030d2c4fd2c"
+  integrity sha1-/Rp5z2EYo4jgob7YoTlwMNLE/Sw=
 
 v8-compile-cache@^2.0.3:
   version "2.1.0"
